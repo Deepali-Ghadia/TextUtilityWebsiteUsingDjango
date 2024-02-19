@@ -4,13 +4,13 @@ def home(request):
     return HttpResponse("You are on the home page...")
 
 def capitalize(request):
-    return HttpResponse("First character of your text will be capitalized")
+    return HttpResponse("<html><h1>Capitalize</h1><br><a href='http://127.0.0.1:8000/home'>BACK</a></html>")
 
 def upper(request):
-    return HttpResponse("Input string will be converted to uppercase")
+    return HttpResponse("<html><h1>Uppercase</h1><br><a href='http://127.0.0.1:8000/home'>BACK</a></html>")
 
 def lower(request):
-    return HttpResponse("Input string will be converted to lowercase")
+    return HttpResponse("<html><h1>Lowercase</h1><br><a href='http://127.0.0.1:8000/home'>BACK</a></html>")
 
 def trim(request):
-    return HttpResponse("Leading and trailing whitespaces will be removed from the string")
+    return HttpResponse("<html><h1>Trim</h1><br><a href='http://127.0.0.1:8000/home'>BACK</a></html>")
