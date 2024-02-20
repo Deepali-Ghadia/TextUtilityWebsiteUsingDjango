@@ -19,7 +19,10 @@ def upper(request):
     return render(request,'upper.html',params)
 
 def lower(request):
-    return HttpResponse("<html><h1>Lowercase</h1><br><a href='/home'>BACK</a></html>")
+    received_text = request.GET.get('input_text')
+    modified_text = received_text.lower()
+    params = {"modified_text":modified_text}
+    return render(request,'lowercase.html',params)
 
 def trim(request):
     return HttpResponse("<html><h1>Trim</h1><br><a href='/home'>BACK</a></html>")
