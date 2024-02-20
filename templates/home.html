@@ -6,6 +6,15 @@
     <title>Homepage - TextUtility Website</title>
 </head>
 <body>
-    Welcome to TextUtility
+    <h1>Welcome to TextUtility</h1>
+    <p>Please enter text to perform various operations on it</p>
+    <form>
+        <!-- input field must have a name attribute to send its value to the server -->
+        <textarea name="input_text" style="width: 815px; height: 99px;" autocomplete="off"></textarea><br>
+        <button type="submit" formaction="/capitalize">Capitalize</button>
+        <button type="submit" formaction="/upper">Upper</button>
+        <button type="submit" formaction="/lower">Lower</button>
+        <button type="submit" formaction="/trim">Trim</button>
+    </form>
 </body>
 </html>
