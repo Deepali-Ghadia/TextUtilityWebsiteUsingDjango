@@ -13,7 +13,10 @@ def capitalize(request):
     return render(request,"capitalize.html",params)
 
 def upper(request):
-    return HttpResponse("<html><h1>Uppercase</h1><br><a href='/home'>BACK</a></html>")
+    received_text = request.GET.get('input_text')
+    modified_text = received_text.upper()
+    params = {"modified_text":modified_text}
+    return render(request,'upper.html',params)
 
 def lower(request):
     return HttpResponse("<html><h1>Lowercase</h1><br><a href='/home'>BACK</a></html>")
