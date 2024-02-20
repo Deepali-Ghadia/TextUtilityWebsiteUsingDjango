@@ -1,7 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse("You are on the home page...")
+    return render(request,"home.html")
 
 def capitalize(request):
     return HttpResponse("<html><h1>Capitalize</h1><br><a href='/home'>BACK</a></html>")
