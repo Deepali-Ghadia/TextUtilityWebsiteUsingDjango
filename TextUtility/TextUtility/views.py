@@ -5,7 +5,12 @@ def home(request):
     return render(request,"home.html")
 
 def capitalize(request):
-    return HttpResponse("<html><h1>Capitalize</h1><br><a href='/home'>BACK</a></html>")
+    print("\n\n",request.GET.get("input_text","default"))
+    received_text = request.GET.get("input_text","default") # collect the data that is passed to input_text i.e. textarea
+    modified_text = received_text.capitalize()
+    print("MODIFIED TEXT",modified_text)
+    params = {'modified_text':modified_text}
+    return render(request,"capitalize.html",params)
 
 def upper(request):
     return HttpResponse("<html><h1>Uppercase</h1><br><a href='/home'>BACK</a></html>")
