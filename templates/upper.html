@@ -8,8 +8,13 @@
 </head>
 <body>
     <h1>Your text will be converted to uppercase here...</h1>
-    <p>The uppercase text for the input string you entered on the homepage is shown below.</body></p>
-    <textarea style="width: 815px; height: 99px;" autocomplete="off">{{modified_text}}</textarea><br>
+    <p>The uppercase text for the input string you entered on the homepage is shown below.</p>
+    <!-- <textarea style="width: 815px; height: 99px;" autocomplete="off">{{modified_text}}</textarea><br> -->
+    <!-- I did this because for multi-line text, HTML was removing all the additional spaces and was rendering the text as a single line. -->
+
+    <!-- Proper solution to this is to use pre tag -->
+    <!-- pre tag/ preformatted tag dispalys text as it is returned by the endpoint -->
+    <pre>{{modified_text}}</pre>
     <a href="/home">BACK</a>
 </body>
 </html>
